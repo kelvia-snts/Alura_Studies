@@ -1,8 +1,8 @@
-import { ITasks } from "../../../types/task";
-import ItemStyle from "../List.module.scss";
+import { ITask } from "../../../types/task";
+import ItemStyle from "./Item.module.scss";
 
-interface Props extends ITasks {
-  selecetTask: (selectedTask: ITasks) => void;
+interface Props extends ITask {
+  selecetTask: (selectedTask: ITask) => void;
 }
 
 export default function Item({

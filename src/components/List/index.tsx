@@ -1,10 +1,10 @@
-import { ITasks } from "../../types/task";
+import { ITask } from "../../types/task";
 import Item from "./Item";
 import ListStyle from "./List.module.scss";
 
 interface Props {
-  tasks: ITasks[];
-  selecetTask: (selectedTask: ITasks) => void;
+  tasks: ITask[];
+  selecetTask: (selectedTask: ITask) => void;
 }
 
 function List({ tasks, selecetTask }: Props) {

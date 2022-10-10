@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import Form from "../components/Form";
 import List from "../components/List";
 import Stopwatch from "../components/Stopwatch";
-import { ITasks } from "../types/task";
+import { ITask } from "../types/task";
 import AppStyle from "./App.module.scss";
 
 function App() {
-  const [tasks, setTasks] = useState<ITasks[] | []>([]);
-  const [selected, setSelected] = useState<ITasks>();
+  const [tasks, setTasks] = useState<ITask[] | []>([]);
+  const [selected, setSelected] = useState<ITask>();
 
-  function selectTask(selectedTask: ITasks) {
+  function selectTask(selectedTask: ITask) {
     setSelected(selectedTask);
     setTasks((oldTasks) =>
       oldTasks.map((task) => ({
@@ -23,7 +23,7 @@ function App() {
     <div className={AppStyle.AppStyle}>
       <Form setTasks={setTasks} />
       <List tasks={tasks} selecetTask={selectTask} />
-      <Stopwatch />
+      <Stopwatch selected={selected} />
     </div>
   );
 }
