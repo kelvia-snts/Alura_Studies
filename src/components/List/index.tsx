@@ -7,7 +7,7 @@ interface Props {
   selecetTask: (selectedTask: ITask) => void;
 }
 
-function List({ tasks, selecetTask }: Props) {
+export function List({ tasks, selecetTask }: Props) {
   return (
     <aside className={ListStyle.listaTarefas}>
       <h2>Estudos do dia</h2>
@@ -19,5 +19,3 @@ function List({ tasks, selecetTask }: Props) {
     </aside>
   );
 }
-
-export default List;
