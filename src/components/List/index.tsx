@@ -9,7 +9,7 @@ interface Props {
 
 export function List({ tasks, selecetTask }: Props) {
   return (
-    <aside className={ListStyle.listaTarefas}>
+    <aside className={ListStyle.toDoList}>
       <h2>Estudos do dia</h2>
       <ul>
         {tasks.map((item) => (

@@ -23,7 +23,7 @@ export function Form({ setTasks }: Props) {
   }
 
   return (
-    <form className={FormStyle.novaTarefa} onSubmit={addTask}>
+    <form className={FormStyle.newTask} onSubmit={addTask}>
       <div className={FormStyle.inputContainer}>
         <label htmlFor="task">Adicione um novo estudo</label>
         <input
